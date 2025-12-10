@@ -16,200 +16,203 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: .\library_management\forms.py:14
 msgid "Viết suy nghĩ của bạn về cuốn sách này..."
-msgstr "Write your thoughts about this book..."
+msgstr ""
 
 #: .\library_management\forms.py:18
 msgid "Nội dung bình luận"
-msgstr "Comment content"
+msgstr ""
 
 #: .\library_management\views\comments.py:24
 msgid "Bình luận của bạn đã được đăng."
-msgstr "Your comment has been posted."
+msgstr ""
 
 #: .\library_management\views\comments.py:26
 msgid "Có lỗi xảy ra với bình luận của bạn."
-msgstr "An error occurred with your comment."
+msgstr ""
 
 #: .\library_management\views\favorites.py:33
 msgid "Đã thêm sách vào danh sách yêu thích!"
-msgstr "Book added to favorites!"
+msgstr ""
 
 #: .\library_management\views\favorites.py:35
 msgid "Cuốn sách này đã có trong danh sách yêu thích của bạn."
-msgstr "This book is already in your favorites."
+msgstr ""
 
 #: .\library_management\views\favorites.py:50
 msgid "Đã bỏ sách khỏi danh sách yêu thích."
-msgstr "Book removed from favorites."
+msgstr ""
 
 #: .\library_management\views\favorites.py:52
 msgid "Sách này không có trong danh sách yêu thích của bạn."
-msgstr "This book is not in your favorites."
+msgstr ""
 
 #: .\templates\accounts\activation_invalid.html:6
 msgid "Liên kết không hợp lệ | Library Management"
-msgstr "Invalid link | Library Management"
+msgstr ""
 
 #: .\templates\accounts\activation_invalid.html:12
 msgid "Liên kết kích hoạt không hợp lệ"
-msgstr "Invalid activation link"
+msgstr ""
 
 #: .\templates\accounts\activation_invalid.html:16
 msgid "Có thể liên kết đã được sử dụng hoặc đã hết hạn."
-msgstr "The link may have been used or expired."
+msgstr ""
 
 #: .\templates\accounts\activation_invalid.html:26
 msgid "Đến trang đăng nhập"
-msgstr "Go to login page"
+msgstr ""
 
 #: .\templates\accounts\activation_success.html:5
 msgid "Kích hoạt thành công | Library Management"
-msgstr "Activation successful | Library Management"
+msgstr ""
 
 #: .\templates\accounts\activation_success.html:12
 msgid "Tài khoản đã được kích hoạt"
-msgstr "Account has been activated"
+msgstr ""
 
 #: .\templates\accounts\activation_success.html:16
-msgid "\n"
-"    Chào <strong>%(username)s</strong>, tài khoản của bạn đã được kích hoạt thành công.\n"
+#, python-format
+msgid ""
+"\n"
+"    Chào <strong>%(username)s</strong>, tài khoản của bạn đã được kích hoạt "
+"thành công.\n"
 "    "
-msgstr "\n"
-"    Hello <strong>%(username)s</strong>, your account has been successfully activated.\n"
-"    "
+msgstr ""
 
 #: .\templates\accounts\activation_success.html:22
-msgid "Bạn đã được đăng nhập. Bây giờ bạn có thể sử dụng đầy đủ các chức năng của hệ thống."
-msgstr "You have been logged in. You can now use all features of the system."
+msgid ""
+"Bạn đã được đăng nhập. Bây giờ bạn có thể sử dụng đầy đủ các chức năng của "
+"hệ thống."
+msgstr ""
 
 #: .\templates\accounts\activation_success.html:27
 msgid "Về trang chính"
-msgstr "Go to homepage"
+msgstr ""
 
 #: .\templates\accounts\activation_success.html:31
 msgid "Bạn sẽ được chuyển hướng về trang chính sau 3 giây..."
-msgstr "You will be redirected to the homepage in 3 seconds..."
+msgstr ""
 
 #: .\templates\accounts\profile.html:6
 msgid "Hồ sơ cá nhân | Library Management"
-msgstr "Personal profile | Library Management"
+msgstr ""
 
 #: .\templates\accounts\profile.html:14 .\templates\base.html:105
 msgid "Hồ sơ cá nhân"
-msgstr "Personal profile"
+msgstr ""
 
 #: .\templates\accounts\profile.html:17
 msgid "Quản lý thông tin tài khoản và cài đặt của bạn"
-msgstr "Manage your account information and settings"
+msgstr ""
 
 #: .\templates\accounts\profile.html:27
 msgid "Cập nhật thành công!"
-msgstr "Update successful!"
+msgstr ""
 
 #: .\templates\accounts\profile.html:34
 msgid "Thông tin tài khoản"
-msgstr "Account information"
+msgstr ""
 
 #: .\templates\accounts\profile.html:35
 msgid "Cập nhật thông tin cá nhân của bạn"
-msgstr "Update your personal information"
+msgstr ""
 
 #: .\templates\accounts\profile.html:43 .\templates\accounts\signup.html:24
 #: .\templates\registration\login.html:31
 msgid "Tên đăng nhập"
-msgstr "Username"
+msgstr ""
 
 #: .\templates\accounts\profile.html:48
 msgid "Không thể thay đổi"
-msgstr "Cannot be changed"
+msgstr ""
 
 #: .\templates\accounts\profile.html:57
 msgid "Họ"
-msgstr "Last name"
+msgstr ""
 
 #: .\templates\accounts\profile.html:59
 msgid "Nguyễn"
-msgstr "Nguyen"
+msgstr ""
 
 #: .\templates\accounts\profile.html:75
 msgid "Tên"
-msgstr "First name"
+msgstr ""
 
 #: .\templates\accounts\profile.html:77
 msgid "An"
-msgstr "An"
+msgstr ""
 
 #: .\templates\accounts\profile.html:95 .\templates\accounts\signup.html:41
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #: .\templates\accounts\profile.html:121
 #: .\templates\registration\password_change_form.html:24
 msgid "Đổi mật khẩu"
-msgstr "Change password"
+msgstr ""
 
 #: .\templates\accounts\profile.html:131
 msgid "Lưu thay đổi"
-msgstr "Save changes"
+msgstr ""
 
 #: .\templates\accounts\signup.html:6
 msgid "Đăng ký tài khoản | Library Management"
-msgstr "Register account | Library Management"
+msgstr ""
 
 #: .\templates\accounts\signup.html:15
 msgid "Bắt đầu thôi!"
-msgstr "Let's get started!"
+msgstr ""
 
 #: .\templates\accounts\signup.html:29 .\templates\registration\login.html:36
 msgid "vd: ngvan_a"
-msgstr "e.g.: ngvan_a"
+msgstr ""
 
 #: .\templates\accounts\signup.html:58 .\templates\registration\login.html:47
 msgid "Mật khẩu"
-msgstr "Password"
+msgstr ""
 
 #: .\templates\accounts\signup.html:75
 msgid "Xác nhận mật khẩu"
-msgstr "Confirm password"
+msgstr ""
 
 #: .\templates\accounts\signup.html:103
 msgid "Đăng ký ngay"
-msgstr "Register now"
+msgstr ""
 
 #: .\templates\accounts\signup.html:109
 msgid "Đã có tài khoản?"
-msgstr "Already have an account?"
+msgstr ""
 
 #: .\templates\accounts\signup.html:111 .\templates\base.html:122
 #: .\templates\catalog\book_detail.html:160
 #: .\templates\registration\login.html:15
 #: .\templates\registration\login.html:69
 msgid "Đăng nhập"
-msgstr "Login"
+msgstr ""
 
 #: .\templates\accounts\signup_done.html:5
 msgid "Đăng ký thành công | Library Management"
-msgstr "Registration successful | Library Management"
+msgstr ""
 
 #: .\templates\accounts\signup_done.html:12
 msgid "Đăng ký thành công"
-msgstr "Registration successful"
+msgstr ""
 
 #: .\templates\accounts\signup_done.html:16
 msgid "Chúng tôi đã gửi cho bạn một email kích hoạt tài khoản."
-msgstr "We have sent you an account activation email."
+msgstr ""
 
 #: .\templates\accounts\signup_done.html:20
-msgid "\n"
-"    Vui lòng kiểm tra hộp thư <strong>(kể cả mục Spam/Junk)</strong> và nhấp vào liên kết kích hoạt để hoàn tất.\n"
+msgid ""
+"\n"
+"    Vui lòng kiểm tra hộp thư <strong>(kể cả mục Spam/Junk)</strong> và nhấp "
+"vào liên kết kích hoạt để hoàn tất.\n"
 "    "
-msgstr "\n"
-"    Please check your inbox <strong>(including Spam/Junk)</strong> and click the activation link to complete.\n"
-"    "
+msgstr ""
 
 #: .\templates\base.html:8 .\templates\base.html:22
 #: .\templates\catalog\author_detail.html:4
@@ -219,722 +222,714 @@ msgstr "\n"
 #: .\templates\catalog\category_list.html:4
 #: .\templates\library_management\base_admin.html:163
 msgid "Library Management"
-msgstr "Library Management"
+msgstr ""
 
 #: .\templates\base.html:25
 msgid "Modern Library Platform"
-msgstr "Modern Library Platform"
+msgstr ""
 
 #: .\templates\base.html:35
 msgid "Trang chủ"
-msgstr "Home"
+msgstr ""
 
 #: .\templates\base.html:39 .\templates\library_management\base_admin.html:113
 msgid "Sách"
-msgstr "Book"
+msgstr ""
 
 #: .\templates\base.html:43 .\templates\catalog\book_detail.html:60
 msgid "Tác giả"
-msgstr "Author"
+msgstr ""
 
 #: .\templates\base.html:48 .\templates\catalog\book_detail.html:74
 msgid "Thể loại"
-msgstr "Genre"
+msgstr ""
 
 #: .\templates\base.html:54
 msgid "Yêu thích"
-msgstr "Favorites"
+msgstr ""
 
 #: .\templates\base.html:59
 msgid "Lịch sử mượn"
-msgstr "Borrow history"
+msgstr ""
 
 #: .\templates\base.html:99
 msgid "Tài khoản"
-msgstr "Account"
+msgstr ""
 
 #: .\templates\base.html:111 .\templates\library_management\base_admin.html:42
 msgid "Đăng xuất"
-msgstr "Logout"
+msgstr ""
 
 #: .\templates\base.html:126 .\templates\registration\login.html:82
 msgid "Đăng ký"
-msgstr "Register"
+msgstr ""
 
 #: .\templates\base.html:185
 msgid "Library Management."
-msgstr "Library Management."
+msgstr ""
 
 #: .\templates\base.html:186
 msgid "Built with Django + Tailwind"
-msgstr "Built with Django + Tailwind"
+msgstr ""
 
 #: .\templates\catalog\author_detail.html:12
 #: .\templates\catalog\book_detail.html:12
 #: .\templates\catalog\category_detail.html:12
 msgid "Quay lại danh sách"
-msgstr "Back to list"
+msgstr ""
 
 #: .\templates\catalog\author_detail.html:25
 #: .\templates\catalog\author_list.html:58
 msgid "Sinh năm"
-msgstr "Year of birth"
+msgstr ""
 
 #: .\templates\catalog\author_detail.html:27
 msgid "Mất năm"
-msgstr "Year of death"
+msgstr ""
 
 #: .\templates\catalog\author_detail.html:32
-msgid "\n"
+#, python-format
+msgid ""
+"\n"
 "          %(counter)s tác phẩm\n"
 "        "
-msgid_plural "\n"
+msgid_plural ""
+"\n"
 "          %(counter)s tác phẩm\n"
 "        "
-msgstr[0] "\n"
-"          %(counter)s works\n"
-"        "
-msgstr[1] "\n"
-"          %(counter)s works\n"
-"        "
+msgstr[0] ""
+msgstr[1] ""
 
 #: .\templates\catalog\author_detail.html:43
 msgid "Tiểu sử"
-msgstr "Biography"
+msgstr ""
 
 #: .\templates\catalog\author_detail.html:51
 msgid "Tác phẩm"
-msgstr "Works"
+msgstr ""
 
 #: .\templates\catalog\author_detail.html:66
 #: .\templates\catalog\book_detail.html:28
 #: .\templates\catalog\book_list.html:64
 #: .\templates\catalog\category_detail.html:94
 msgid "Không có ảnh bìa"
-msgstr "No cover image"
+msgstr ""
 
 #: .\templates\catalog\author_detail.html:76
 #: .\templates\catalog\book_detail.html:97
 #: .\templates\catalog\book_list.html:81
 #: .\templates\catalog\category_detail.html:111
 msgid "Năm xuất bản"
-msgstr "Year published"
+msgstr ""
 
 #: .\templates\catalog\author_detail.html:96
 msgid "Chưa có tác phẩm nào"
-msgstr "No works yet"
+msgstr ""
 
 #: .\templates\catalog\author_list.html:4
 #: .\templates\catalog\author_list.html:9
 msgid "Danh sách tác giả"
-msgstr "Author list"
+msgstr ""
 
 #: .\templates\catalog\author_list.html:12
 msgid "Khám phá các tác giả và tác phẩm của họ"
-msgstr "Discover authors and their works"
+msgstr ""
 
 #: .\templates\catalog\author_list.html:23
 msgid "Tìm kiếm tác giả..."
-msgstr "Search author..."
+msgstr ""
 
 #: .\templates\catalog\author_list.html:30
 #: .\templates\catalog\book_list.html:30
 #: .\templates\catalog\category_list.html:30
 msgid "Tìm kiếm"
-msgstr "Search"
+msgstr ""
 
 #: .\templates\catalog\author_list.html:50
-msgid "\n"
+#, python-format
+msgid ""
+"\n"
 "                  %(counter)s cuốn sách\n"
 "                "
-msgid_plural "\n"
+msgid_plural ""
+"\n"
 "                  %(counter)s cuốn sách\n"
 "                "
-msgstr[0] "\n"
-"                  %(counter)s books\n"
-"                "
-msgstr[1] "\n"
-"                  %(counter)s books\n"
-"                "
+msgstr[0] ""
+msgstr[1] ""
 
 #: .\templates\catalog\author_list.html:82
 #: .\templates\catalog\book_list.html:96
 #: .\templates\catalog\category_list.html:94
 msgid "Đầu"
-msgstr "First"
+msgstr ""
 
 #: .\templates\catalog\author_list.html:86
 #: .\templates\catalog\book_detail.html:203
 #: .\templates\catalog\book_list.html:100
 #: .\templates\catalog\category_list.html:98
 msgid "Trước"
-msgstr "Previous"
+msgstr ""
 
 #: .\templates\catalog\author_list.html:97
 #: .\templates\catalog\book_detail.html:214
 #: .\templates\catalog\book_list.html:111
 #: .\templates\catalog\category_list.html:109
 msgid "Sau"
-msgstr "Next"
+msgstr ""
 
 #: .\templates\catalog\author_list.html:101
 #: .\templates\catalog\book_list.html:115
 #: .\templates\catalog\category_list.html:113
 msgid "Cuối"
-msgstr "End"
+msgstr ""
 
 #: .\templates\catalog\author_list.html:111
 msgid "Không tìm thấy tác giả nào"
-msgstr "No author found"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:35
 msgid "Tình trạng"
-msgstr "Status"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:38
 msgid "Còn sách"
-msgstr "Available"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:42
 msgid "Hết sách"
-msgstr "Out of stock"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:47
-msgid "\n"
+#, python-format
+msgid ""
+"\n"
 "          %(available)s / %(total)s cuốn có sẵn\n"
 "          "
-msgstr "\n"
-"          %(available)s / %(total)s copies available\n"
-"          "
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:68
 #: .\templates\catalog\book_list.html:76
 #: .\templates\catalog\category_detail.html:106
 msgid "Không rõ tác giả"
-msgstr "Unknown author"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:82
 msgid "Chưa phân loại"
-msgstr "Uncategorized"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:104
 msgid "Nhà xuất bản"
-msgstr "Publisher"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:111
 msgid "Số trang"
-msgstr "Number of pages"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:118
 msgid "Ngôn ngữ"
-msgstr "Language"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:126
 #: .\templates\catalog\category_detail.html:37
 msgid "Mô tả"
-msgstr "Description"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:136
 #: .\templates\library_utilities\borrow_request_form.html:4
 #: .\templates\library_utilities\borrow_request_form.html:22
 msgid "Mượn sách"
-msgstr "Borrow book"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:140
 msgid "Tạm hết sách"
-msgstr "Temporarily out of stock"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:147
 msgid "Bỏ yêu thích"
-msgstr "Remove from favorites"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:152
 msgid "Thêm vào yêu thích"
-msgstr "Add to favorites"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:162
 msgid "để mượn sách hoặc thêm vào bộ sưu tập yêu thích của bạn."
-msgstr "to borrow books or add to your favorite collection."
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:169
 msgid "Bình luận & Đánh giá"
-msgstr "Comments & Ratings"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:193
 msgid "Chưa có bình luận nào. Hãy là người đầu tiên chia sẻ cảm nghĩ!"
-msgstr "No comments yet. Be the first to share your thoughts!"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:227
 msgid "Viết bình luận của bạn"
-msgstr "Write your comment"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:239
 msgid "Gửi bình luận"
-msgstr "Send comment"
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:246
 msgid "Vui lòng đăng nhập để tham gia thảo luận."
-msgstr "Please log in to join the discussion."
+msgstr ""
 
 #: .\templates\catalog\book_detail.html:249
 msgid "Đăng nhập ngay"
-msgstr "Log in now"
+msgstr ""
 
 #: .\templates\catalog\book_list.html:4 .\templates\catalog\book_list.html:9
 msgid "Danh sách sách"
-msgstr "Book list"
+msgstr ""
 
 #: .\templates\catalog\book_list.html:12
 msgid "Khám phá bộ sưu tập sách phong phú của thư viện"
-msgstr "Explore the library's rich book collection"
+msgstr ""
 
 #: .\templates\catalog\book_list.html:23
 msgid "Tìm kiếm sách, tác giả..."
-msgstr "Search for books, authors..."
+msgstr ""
 
 #: .\templates\catalog\book_list.html:40
 msgid "Tất cả thể loại"
-msgstr "All genres"
+msgstr ""
 
 #: .\templates\catalog\book_list.html:125
 msgid "Không tìm thấy sách nào"
-msgstr "No books found"
+msgstr ""
 
 #: .\templates\catalog\category_detail.html:26
-msgid "\n"
+#, python-format
+msgid ""
+"\n"
 "          %(counter)s cuốn sách\n"
 "        "
-msgid_plural "\n"
+msgid_plural ""
+"\n"
 "          %(counter)s cuốn sách\n"
 "        "
-msgstr[0] "\n"
-"          %(counter)s books\n"
-"        "
-msgstr[1] "\n"
-"          %(counter)s books\n"
-"        "
+msgstr[0] ""
+msgstr[1] ""
 
 #: .\templates\catalog\category_detail.html:44
 msgid "Thể loại cha"
-msgstr "Parent genre"
+msgstr ""
 
 #: .\templates\catalog\category_detail.html:56
 #: .\templates\catalog\category_list.html:68
 msgid "Thể loại con"
-msgstr "Subgenre"
+msgstr ""
 
 #: .\templates\catalog\category_detail.html:65
-msgid "\n"
+#, python-format
+msgid ""
+"\n"
 "              %(counter)s sách\n"
 "            "
-msgid_plural "\n"
+msgid_plural ""
+"\n"
 "              %(counter)s sách\n"
 "            "
-msgstr[0] "\n"
-"              %(counter)s books\n"
-"            "
-msgstr[1] "\n"
-"              %(counter)s books\n"
-"            "
+msgstr[0] ""
+msgstr[1] ""
 
 #: .\templates\catalog\category_detail.html:79
 msgid "Sách trong thể loại này"
-msgstr "Books in this genre"
+msgstr ""
 
 #: .\templates\catalog\category_detail.html:124
 msgid "Chưa có sách nào trong thể loại này"
-msgstr "No books in this genre yet"
+msgstr ""
 
 #: .\templates\catalog\category_list.html:4
 #: .\templates\catalog\category_list.html:9
 msgid "Danh sách thể loại"
-msgstr "Genre list"
+msgstr ""
 
 #: .\templates\catalog\category_list.html:12
 msgid "Khám phá sách theo thể loại"
-msgstr "Explore books by genre"
+msgstr ""
 
 #: .\templates\catalog\category_list.html:23
 msgid "Tìm kiếm thể loại..."
-msgstr "Search genre..."
+msgstr ""
 
 #: .\templates\catalog\category_list.html:48
-msgid "\n"
+#, python-format
+msgid ""
+"\n"
 "                %(counter)s sách\n"
 "              "
-msgid_plural "\n"
+msgid_plural ""
+"\n"
 "                %(counter)s sách\n"
 "              "
-msgstr[0] "\n"
-"                %(counter)s books\n"
-"              "
-msgstr[1] "\n"
-"                %(counter)s books\n"
-"              "
+msgstr[0] ""
+msgstr[1] ""
 
 #: .\templates\catalog\category_list.html:123
 msgid "Không tìm thấy thể loại nào"
-msgstr "No genre found"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:5
 msgid "Admin – Tổng quan | Library"
-msgstr "Admin – Overview | Library"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:13
 #: .\templates\library_management\home.html:11
 msgid "Trang chủ thư viện"
-msgstr "Library homepage"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:16
 #: .\templates\library_management\home.html:14
 msgid "Quản lý sách, độc giả và phiếu mượn."
-msgstr "Manage books, readers, and borrow tickets."
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:17
 msgid "Dashboard admin cho hệ thống quản lý thư viện."
-msgstr "Admin dashboard for the library management system."
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:24
 #: .\templates\library_management\home.html:22
 msgid "+ Thêm sách mới"
-msgstr "+ Add new book"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:28
 #: .\templates\library_management\home.html:26
 msgid "+ Thêm độc giả"
-msgstr "+ Add reader"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:36
 #: .\templates\library_management\home.html:34
 msgid "Tổng số sách"
-msgstr "Total books"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:38
 #: .\templates\library_management\home.html:36
 msgid "+8 so với tuần trước"
-msgstr "+8 compared to last week"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:42
 #: .\templates\library_management\home.html:40
 msgid "Số độc giả"
-msgstr "Number of readers"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:44
 #: .\templates\library_management\home.html:42
 msgid "Đang hoạt động"
-msgstr "Active"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:48
 #: .\templates\library_management\home.html:46
 msgid "Sách đang được mượn"
-msgstr "Books being borrowed"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:50
 #: .\templates\library_management\home.html:48
 msgid "2 quyển quá hạn"
-msgstr "2 overdue books"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:54
 #: .\templates\library_management\home.html:52
 msgid "Phiếu mượn hôm nay"
-msgstr "Today's borrow slips"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:56
 #: .\templates\library_management\home.html:54
 msgid "Cập nhật theo ngày"
-msgstr "Updated daily"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:65
 #: .\templates\library_management\home.html:64
 msgid "Sách mới thêm"
-msgstr "Recently added books"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:67
 #: .\templates\library_management\home.html:65
 msgid "Xem tất cả"
-msgstr "See all"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:73
 #: .\templates\library_management\admin_dashboard.html:77
 #: .\templates\library_management\home.html:70
 #: .\templates\library_management\home.html:74
 msgid "Lập trình"
-msgstr "Programming"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:81
 #: .\templates\library_management\home.html:78
 msgid "Kỹ năng"
-msgstr "Skills"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:89
 #: .\templates\library_management\home.html:86
 msgid "Phiếu mượn gần đây"
-msgstr "Recent borrow slips"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:91
 #: .\templates\library_management\home.html:87
 #: .\templates\library_utilities\favorites.html:50
 msgid "Xem chi tiết"
-msgstr "View details"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:101
 #: .\templates\library_management\home.html:97
 msgid "Đang mượn"
-msgstr "Being borrowed"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:110
 #: .\templates\library_management\home.html:107
 msgid "Gần tới hạn"
-msgstr "About to be due"
+msgstr ""
 
 #: .\templates\library_management\admin_dashboard.html:119
 #: .\templates\library_management\home.html:117
 msgid "Đã trả"
-msgstr "Returned"
+msgstr ""
 
 #: .\templates\library_management\base_admin.html:8
 #: .\templates\library_management\base_admin.html:24
 msgid "Library Admin"
-msgstr "Library Admin"
+msgstr ""
 
 #: .\templates\library_management\base_admin.html:25
 msgid "Bảng điều khiển quản lý thư viện"
-msgstr "Library management dashboard"
+msgstr ""
 
 #: .\templates\library_management\base_admin.html:32
 msgid "Về trang người dùng"
-msgstr "Go to user page"
+msgstr ""
 
 #: .\templates\library_management\base_admin.html:61
 msgid "Admin"
-msgstr "Admin"
+msgstr ""
 
 #: .\templates\library_management\base_admin.html:83
 msgid "Tổng quan"
-msgstr "Overview"
+msgstr ""
 
 #: .\templates\library_management\base_admin.html:98
 msgid "Người dùng"
-msgstr "Users"
+msgstr ""
 
 #: .\templates\library_management\base_admin.html:128
 msgid "Danh mục"
-msgstr "Categories"
+msgstr ""
 
 #: .\templates\library_management\base_admin.html:143
 msgid "Yêu cầu mượn"
-msgstr "Borrow requests"
+msgstr ""
 
 #: .\templates\library_management\base_admin.html:158
 msgid "Thống kê"
-msgstr "Statistics"
+msgstr ""
 
 #: .\templates\library_management\home.html:4
 msgid "Trang chủ | Library"
-msgstr "Homepage | Library"
+msgstr ""
 
 #: .\templates\library_management\home.html:15
 msgid "Dashboard demo cho hệ thống quản lý thư viện."
-msgstr "Demo dashboard for the library management system."
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:4
 #: .\templates\library_utilities\borrow_history.html:13
 msgid "Lịch sử mượn sách"
-msgstr "Book borrowing history"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:16
 msgid "Danh sách các yêu cầu mượn sách của:"
-msgstr "List of book borrowing requests for:"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:23
 #: .\templates\library_utilities\borrow_request_form.html:13
 #: .\templates\library_utilities\favorites.html:21
 msgid "Quay lại trang chủ"
-msgstr "Back to homepage"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:49
 msgid "Chưa có thông tin sách"
-msgstr "No book information"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:60
 msgid "Tạo lúc"
-msgstr "Created at"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:69
 msgid "Đang chờ duyệt"
-msgstr "Pending approval"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:77
 msgid "Hủy yêu cầu"
-msgstr "Cancel request"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:84
 msgid "Đã được chấp nhận"
-msgstr "Accepted"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:89
 msgid "Bị từ chối"
-msgstr "Rejected"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:94
 msgid "Đã hủy"
-msgstr "Cancelled"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:99
 msgid "Quá hạn"
-msgstr "Overdue"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:112
 msgid "Lý do từ chối"
-msgstr "Reason for rejection"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:122
 msgid "Bạn chưa có yêu cầu mượn sách nào."
-msgstr "You have no book borrowing requests."
+msgstr ""
 
 #: .\templates\library_utilities\borrow_history.html:125
 msgid "Hãy chọn một cuốn sách và tạo yêu cầu mượn đầu tiên."
-msgstr "Please select a book and create your first borrowing request."
+msgstr ""
 
 #: .\templates\library_utilities\borrow_request_form.html:25
-msgid "\n"
+#, python-format
+msgid ""
+"\n"
 "            Bạn đang tạo yêu cầu mượn cho\n"
 "            <span class=\"font-medium text-slate-900\">\n"
 "                %(book_title)s\n"
 "            </span>\n"
 "            "
-msgstr "\n"
-"            You are creating a borrowing request for\n"
-"            <span class=\"font-medium text-slate-900\">\n"
-"                %(book_title)s\n"
-"            </span>\n"
-"            "
+msgstr ""
 
 #: .\templates\library_utilities\borrow_request_form.html:56
 msgid "Ngày mượn"
-msgstr "Borrowing date"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_request_form.html:62
 msgid "Ngày bắt đầu mượn sách."
-msgstr "The date you will start borrowing the book."
+msgstr ""
 
 #: .\templates\library_utilities\borrow_request_form.html:69
 msgid "Ngày trả dự kiến"
-msgstr "Expected return date"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_request_form.html:75
 msgid "Ngày bạn sẽ trả lại sách cho thư viện."
-msgstr "The date you will return the book to the library."
+msgstr ""
 
 #: .\templates\library_utilities\borrow_request_form.html:83
 msgid "Số lượng"
-msgstr "Quantity"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_request_form.html:89
 msgid "Số bản bạn muốn mượn (tối đa theo tồn kho)."
-msgstr "Number of copies you want to borrow (up to available stock)."
+msgstr ""
 
 #: .\templates\library_utilities\borrow_request_form.html:97
 msgid "Hủy"
-msgstr "Cancel"
+msgstr ""
 
 #: .\templates\library_utilities\borrow_request_form.html:101
 msgid "Gửi yêu cầu"
-msgstr "Submit request"
+msgstr ""
 
 #: .\templates\library_utilities\favorites.html:4
 msgid "Sách yêu thích | Library"
-msgstr "Favorite Books | Library"
+msgstr ""
 
 #: .\templates\library_utilities\favorites.html:12
 msgid "Sách yêu thích"
-msgstr "Favorite Books"
+msgstr ""
 
 #: .\templates\library_utilities\favorites.html:15
 msgid "Danh sách các cuốn sách bạn đã thêm vào mục yêu thích."
-msgstr "List of books you have added to your favorites."
+msgstr ""
 
 #: .\templates\library_utilities\favorites.html:38
 msgid "NXB"
-msgstr "Publisher"
+msgstr ""
 
 #: .\templates\library_utilities\favorites.html:43
 msgid "Thêm vào yêu thích lúc"
-msgstr "Added to favorites at"
+msgstr ""
 
 #: .\templates\library_utilities\favorites.html:63
 msgid "Bạn chưa thêm cuốn sách nào vào danh sách yêu thích."
-msgstr "You have not added any books to your favorites list."
+msgstr ""
 
 #: .\templates\library_utilities\favorites.html:66
 msgid "Hãy duyệt danh sách sách và nhấn “Yêu thích” ở những cuốn bạn quan tâm."
-msgstr "Browse the book list and click “Favorite” on the books you are interested in."
+msgstr ""
 
 #: .\templates\library_utilities\favorites.html:69
 msgid "Khám phá sách ngay"
-msgstr "Discover books now"
+msgstr ""
 
 #: .\templates\registration\login.html:6
 msgid "Đăng nhập | Library Management"
-msgstr "Sign in | Library Management"
+msgstr ""
 
 #: .\templates\registration\login.html:74
 msgid "Quên mật khẩu?"
-msgstr "Forgot password?"
+msgstr ""
 
 #: .\templates\registration\login.html:80
 msgid "Chưa có tài khoản?"
-msgstr "Don’t have an account?"
+msgstr ""
 
 #: .\templates\registration\password_change_done.html:6
 msgid "Đổi mật khẩu thành công | Library Management"
-msgstr "Password changed successfully | Library Management"
+msgstr ""
 
 #: .\templates\registration\password_change_done.html:15
 msgid "Mật khẩu đã được cập nhật"
-msgstr "Password has been updated"
+msgstr ""
 
 #: .\templates\registration\password_change_done.html:19
 msgid "Bạn đã đổi mật khẩu thành công."
-msgstr "You have successfully changed your password."
+msgstr ""
 
 #: .\templates\registration\password_change_done.html:27
 #: .\templates\registration\password_change_form.html:18
 msgid "Quay lại hồ sơ"
-msgstr "Back to profile"
+msgstr ""
 
 #: .\templates\registration\password_change_form.html:6
 msgid "Đổi mật khẩu | Library Management"
-msgstr "Change password | Library Management"
+msgstr ""
 
 #: .\templates\registration\password_change_form.html:53
 msgid "Mật khẩu hiện tại"
-msgstr "Current password"
+msgstr ""
 
 #: .\templates\registration\password_change_form.html:82
 msgid "MẬT KHẨU MỚI"
-msgstr "NEW PASSWORD"
+msgstr ""
 
 #: .\templates\registration\password_change_form.html:90
 msgid "Mật khẩu mới"
-msgstr "New password"
+msgstr ""
 
 #: .\templates\registration\password_change_form.html:114
 msgid "Xác nhận mật khẩu mới"
-msgstr "Confirm new password"
+msgstr ""
 
 #: .\templates\registration\password_change_form.html:147
 msgid "Yêu cầu mật khẩu"
-msgstr "Password requirements"
+msgstr ""
 
 #: .\templates\registration\password_change_form.html:151
 msgid "Tối thiểu 8 ký tự"
-msgstr "Minimum 8 characters"
+msgstr ""
 
 #: .\templates\registration\password_change_form.html:152
 msgid "Không được giống tên đăng nhập"
-msgstr "Must not be the same as username"
+msgstr ""
 
 #: .\templates\registration\password_change_form.html:169
 msgid "Cập nhật mật khẩu"
-msgstr "Update password"
+msgstr ""

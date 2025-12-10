@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Danh sách thể loại" %} | {% trans "Library Management" %}{% endblock %}
+
+{% block content %}
+<div class="mb-8">
+  <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-2">
+    {% trans "Danh sách thể loại" %}
+  </h1>
+  <p class="text-sm md:text-base text-slate-600">
+    {% trans "Khám phá sách theo thể loại" %}
+  </p>
+</div>
+
+<!-- Search -->
+<div class="mb-6">
+  <form method="get" class="flex gap-2">
+    <input 
+      type="text" 
+      name="search" 
+      value="{{ search_query }}" 
+      placeholder="{% trans 'Tìm kiếm thể loại...' %}"
+      class="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+    <button 
+      type="submit"
+      class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium"
+    >
+      {% trans "Tìm kiếm" %}
+    </button>
+  </form>
+</div>
+
+<!-- Categories Grid -->
+{% if categories %}
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+    {% for category in categories %}
+      <a href="{% url 'catalog:category_detail' category.pk %}" class="group">
+        <div class="bg-white rounded-xl border border-slate-200 p-6 hover:shadow-lg transition-shadow">
+          <div class="flex items-start justify-between mb-3">
+            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+              {% blocktrans count counter=category.book_count %}
+                {{ counter }} sách
+              {% plural %}
+                {{ counter }} sách
+              {% endblocktrans %}
+            </span>
+          </div>
+          
+          <h3 class="text-lg font-semibold text-slate-900 mb-2 group-hover:text-purple-600">
+            {{ category.name }}
+          </h3>
+          
+          {% if category.description %}
+            <p class="text-sm text-slate-600 line-clamp-2">
+              {{ category.description }}
+            </p>
+          {% endif %}
+
+          {% if category.children.all %}
+            <div class="mt-3 pt-3 border-t border-slate-100">
+              <p class="text-xs text-slate-500 mb-2">{% trans "Thể loại con" %}:</p>
+              <div class="flex flex-wrap gap-1">
+                {% for child in category.children.all|slice:":3" %}
+                  <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded">
+                    {{ child.name }}
+                  </span>
+                {% endfor %}
+                {% if category.children.count > 3 %}
+                  <span class="px-2 py-0.5 text-slate-500 text-xs">
+                    +{{ category.children.count|add:"-3" }}
+                  </span>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+
+  <!-- Pagination -->
+  {% if is_paginated %}
+    <div class="flex justify-center gap-2">
+      {% if page_obj.has_previous %}
+        <a href="?page=1{% if search_query %}&search={{ search_query }}{% endif %}" 
+           class="px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50">
+          {% trans "Đầu" %}
+        </a>
+        <a href="?page={{ page_obj.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}" 
+           class="px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50">
+          {% trans "Trước" %}
+        </a>
+      {% endif %}
+
+      <span class="px-4 py-2 bg-blue-600 text-white rounded-lg">
+        {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+      </span>
+
+      {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}" 
+           class="px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50">
+          {% trans "Sau" %}
+        </a>
+        <a href="?page={{ page_obj.paginator.num_pages }}{% if search_query %}&search={{ search_query }}{% endif %}" 
+           class="px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50">
+          {% trans "Cuối" %}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+{% else %}
+  <div class="text-center py-12">
+    <svg class="w-16 h-16 mx-auto mb-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+    </svg>
+    <p class="text-slate-500">{% trans "Không tìm thấy thể loại nào" %}</p>
+  </div>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Danh sách sách" %} | {% trans "Library Management" %}{% endblock %}
+
+{% block content %}
+<div class="mb-8">
+  <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-2">
+    {% trans "Danh sách sách" %}
+  </h1>
+  <p class="text-sm md:text-base text-slate-600">
+    {% trans "Khám phá bộ sưu tập sách phong phú của thư viện" %}
+  </p>
+</div>
+
+<!-- Search and Filter -->
+<div class="mb-6 flex flex-col md:flex-row gap-4">
+  <form method="get" class="flex-1 flex gap-2">
+    <input 
+      type="text" 
+      name="search" 
+      value="{{ search_query }}" 
+      placeholder="{% trans 'Tìm kiếm sách, tác giả...' %}"
+      class="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+    <button 
+      type="submit"
+      class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium"
+    >
+      {% trans "Tìm kiếm" %}
+    </button>
+  </form>
+
+  <form method="get" class="flex gap-2">
+    <select 
+      name="category" 
+      onchange="this.form.submit()"
+      class="px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+      <option value="">{% trans "Tất cả thể loại" %}</option>
+      {% for category in categories %}
+        <option value="{{ category.id }}" {% if selected_category == category.id|stringformat:"s" %}selected{% endif %}>
+          {{ category.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </form>
+</div>
+
+<!-- Books Grid -->
+{% if books %}
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+    {% for book in books %}
+      <a href="{% url 'catalog:book_detail' book.pk %}" class="group">
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="aspect-[3/4] bg-slate-100 flex items-center justify-center">
+            {% if book.cover_url %}
+              <img src="{{ book.cover_url }}" alt="{{ book.title }}" class="w-full h-full object-cover">
+            {% else %}
+              <div class="text-slate-400 text-center p-4">
+                <svg class="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <span class="text-xs">{% trans "Không có ảnh bìa" %}</span>
+              </div>
+            {% endif %}
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-slate-900 mb-1 line-clamp-2 group-hover:text-blue-600">
+              {{ book.title }}
+            </h3>
+            <p class="text-sm text-slate-600 mb-2">
+              {% for author in book.authors.all %}
+                {{ author.name }}{% if not forloop.last %}, {% endif %}
+              {% empty %}
+                {% trans "Không rõ tác giả" %}
+              {% endfor %}
+            </p>
+            {% if book.publish_year %}
+              <p class="text-xs text-slate-500">
+                {% trans "Năm xuất bản" %}: {{ book.publish_year }}
+              </p>
+            {% endif %}
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+
+  <!-- Pagination -->
+  {% if is_paginated %}
+    <div class="flex justify-center gap-2">
+      {% if page_obj.has_previous %}
+        <a href="?page=1{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_category %}&category={{ selected_category }}{% endif %}" 
+           class="px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50">
+          {% trans "Đầu" %}
+        </a>
+        <a href="?page={{ page_obj.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_category %}&category={{ selected_category }}{% endif %}" 
+           class="px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50">
+          {% trans "Trước" %}
+        </a>
+      {% endif %}
+
+      <span class="px-4 py-2 bg-blue-600 text-white rounded-lg">
+        {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+      </span>
+
+      {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_category %}&category={{ selected_category }}{% endif %}" 
+           class="px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50">
+          {% trans "Sau" %}
+        </a>
+        <a href="?page={{ page_obj.paginator.num_pages }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_category %}&category={{ selected_category }}{% endif %}" 
+           class="px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50">
+          {% trans "Cuối" %}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+{% else %}
+  <div class="text-center py-12">
+    <svg class="w-16 h-16 mx-auto mb-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>
+    <p class="text-slate-500">{% trans "Không tìm thấy sách nào" %}</p>
+  </div>
+{% endif %}
+{% endblock %}
+

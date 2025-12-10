@@ -11,10 +11,8 @@
 </head>
 
 <body class="bg-slate-100 text-slate-900 antialiased">
-  <!-- TOP BAR -->
   <header class="border-b border-slate-200 bg-white/80 backdrop-blur">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-6">
-      <!-- Logo -->
       <div class="flex items-center gap-2">
         <div class="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center text-white text-sm font-bold">
           LM
@@ -29,7 +27,6 @@
         </div>
       </div>
 
-      <!-- NAVBAR -->
       <nav class="hidden sm:flex items-center gap-4 text-sm">
         <div class="flex items-center gap-3">
 
@@ -38,16 +35,22 @@
             {% trans "Trang chủ" %}
           </a>
 
-          <a href="#" class="px-3 py-1.5 rounded-full hover:bg-slate-100 text-slate-800">
+          <a href="{% url 'catalog:book_list' %}" class="px-3 py-1.5 rounded-full hover:bg-slate-100 text-slate-800">
             {% trans "Sách" %}
           </a>
 
-          <a href="#" class="px-3 py-1.5 rounded-full hover:bg-slate-100 text-slate-800">
+          <a href="{% url 'catalog:author_list' %}" class="px-3 py-1.5 rounded-full hover:bg-slate-100 text-slate-800">
             {% trans "Tác giả" %}
           </a>
 
+          <a href="{% url 'catalog:category_list' %}"
+            class="px-3 py-1.5 rounded-full hover:bg-slate-100 text-slate-800">
+            {% trans "Thể loại" %}
+          </a>
+
           {% if user.is_authenticated %}
-          <a href="#" class="px-3 py-1.5 rounded-full hover:bg-slate-100 text-slate-800">
+          <a href="{% url 'library_management:favorite_books' %}"
+            class="px-3 py-1.5 rounded-full hover:bg-slate-100 text-slate-800">
             {% trans "Yêu thích" %}
           </a>
 
@@ -128,12 +131,55 @@
     </div>
   </header>
 
-  <!-- MAIN -->
   <main class="{% block main_classes %}max-w-6xl mx-auto px-4 py-8{% endblock %}">
+
+    {% if messages %}
+    <div class="mb-6 space-y-2">
+      {% for message in messages %}
+      <div class="p-4 rounded-xl border flex items-start gap-3 shadow-sm transition-all duration-300
+            {% if message.tags == 'success' %}
+              bg-emerald-50 border-emerald-200 text-emerald-800
+            {% elif message.tags == 'error' %}
+              bg-red-50 border-red-200 text-red-800
+            {% elif message.tags == 'warning' %}
+              bg-amber-50 border-amber-200 text-amber-800
+            {% else %}
+              bg-blue-50 border-blue-200 text-blue-800
+            {% endif %}">
+
+        {% if message.tags == 'success' %}
+        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        {% elif message.tags == 'error' %}
+        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        {% else %}
+        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        {% endif %}
+
+        <div class="text-sm font-medium">
+          {{ message }}
+        </div>
+
+        <button type="button" onclick="this.parentElement.remove()"
+          class="ml-auto text-current opacity-50 hover:opacity-100 p-0.5 rounded hover:bg-black/5 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
     {% block content %}{% endblock %}
   </main>
 
-  <!-- FOOTER -->
   <footer class="border-t border-slate-200 mt-8">
     <div class="max-w-6xl mx-auto px-4 py-4 text-xs text-slate-500 flex justify-between">
       <span>&copy; 2025 {% trans "Library Management." %}</span>
